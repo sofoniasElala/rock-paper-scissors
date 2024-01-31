@@ -24,3 +24,32 @@ function playRockPaperScissors(playerSelection, computerSelection){
         }
          
 }
+
+
+
+function playGame(){
+    let playerScore = 0;
+    let computerScore = 0;
+    let roundWinner = "";
+
+    for(let i = 1; i <= 5; i++){
+     let userInput = prompt(`Round ${i}: What hand do you want to play?`);
+     roundWinner = playRockPaperScissors(userInput, getComputerChoice());
+
+     if(roundWinner.includes("won")){
+        playerScore++;
+       } else if (roundWinner.includes("lost")){
+        computerScore++;
+       } 
+
+       console.log(roundWinner);
+    }
+
+    console.log(`
+    Your Score: ${playerScore}
+    Computer Score: ${computerScore}
+
+    Winner: ${playerScore > computerScore ? "You!" : "Computer"}`);
+}
+
+playGame();
