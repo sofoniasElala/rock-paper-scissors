@@ -3,12 +3,40 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Rock Papers Scissors</title>
-    <script src="rps.js"></script>
+    <title>Rock Paper Scissors</title>
+    <script src="rps.js" defer></script>
+    <style>
+        .container {
+            display: flex;
+            gap: 25px;
+            width: 500px;
+            height: 100px;
+        }
+
+        .computer h4 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-
+    <h1><strong>Rock Paper Scissors <em>VS</em> Computer</strong></h1>
+    <div class="container">
+        <div class="player">
+            <h2>Pick a hand</h2>
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div class="computer">
+            <h2>Computer's hand</h2>
+            <h4 id="compHand"></h4>
+        </div>
+    </div>
+    <h2><strong>_________________________________</strong></h2>
+    <h2><strong>Score</strong></h2>
+    <h4 id="playerScore">You: </h4>
+    <h4 id="computerScore">Computer: </h4>
 </body>
 
 </html>
